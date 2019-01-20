@@ -30,16 +30,17 @@ node{
   // sh "curl --data 'TestName=testName' http://:8080/job/QA%20RESEARCH%20AND%20DEVELOPMENT/job/Testing%20Runs/   buildWithParameters"
   echo "Need to replace with correct tests!"
 }
-catch (err) {
-    echo "Failed: ${err}"
-    env.BUILD_STATUS="Failed"
-    currentBuild.result="Failed"
-}
+
   stage ("Pulling docker image in production-envionment and deploying")
      sh 'scripts/prod-deploy.sh'
    }
   stage("verify service is up.")
   sh "scripts/verify_app.sh http://{serverip}:8080" | grep 'Hello World'
+}
+catch (err) {
+    echo "Failed: ${err}"
+    env.BUILD_STATUS="Failed"
+    currentBuild.result="Failed"
 }
 finally {
 stage("Send Email Notification"){
