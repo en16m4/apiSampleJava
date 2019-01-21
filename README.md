@@ -65,5 +65,5 @@ Apart from tools mentioned above, we can run following commands:**
     -> use Ansible/Chef or any deployment tools to manage deployments more mature.
     -> application properties can be fetched from Consul. (http fetch).
     -> Create Deployment status dashboard **(http://dashing.io/)**
-    -> we can integrate IAC(infra as code) for provisioning other components(s3/subnets/security groups)(AWS/GCP)
+    -> we can integrate Terraform IAC(infra as code) for provisioning other components(s3/subnets/security groups)(AWS/GCP)
     -> Use **GitLAb solution for whole CI/CD solution**.
