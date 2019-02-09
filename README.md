@@ -60,10 +60,9 @@ Apart from tools mentioned above, we can run following commands:**
     
 
 **Future Improvements:** 
-
-    -> use Hashicorp Packer for creating docker images(not creating un-neccesary docker-image layers thus reducing size.)
-    -> use Ansible/Chef or any deployment tools to manage deployments more mature.
-    -> application properties can be fetched from Consul. (http fetch).
+    -> use Hashicorp Packer for creating docker images(not creating un-neccesary docker-image layers thus reducing docker image size.)
+    -> use Ansible/Chef or any deployment tools to manage deployments more mature way.
+    -> application properties can be fetched from Consul.(http fetch)/dynamic fetch.
     -> Create Deployment status dashboard **(http://dashing.io/)**
     -> we can integrate Terraform IAC(infra as code) for provisioning other components(s3/subnets/security groups)(AWS/GCP)
     -> Use **GitLAb solution for whole CI/CD solution**.
